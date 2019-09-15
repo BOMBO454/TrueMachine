@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/pavel-truemashine.iml
+/.idea/inspectionProfiles/Project_Default.xml
+/public/robots.txt
+/.idea/dictionaries/root.xml
+/.idea/vcs.xml
+/.idea/watcherTasks.xml
