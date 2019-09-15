@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+//colors
+$AccentBlue: #109CF1;
+$Yellow: #FFB946;
+$Red: #F7685B;
+$Green: #2ED47A;
+$Purple: #885AF8;
+$Black: #192A3E;
+$TableBlack: #323C47;
+$TableGray: #707683;
+$DarkBlueText: #334D6E;
+$Gray: #90A0B7;
+$IconGray: #C2CFE0;
+$White: #FFFFFF;
+$Background: #F5F6F8;
+
+$Gray: #90A0B7;
+$MainFont: 'Poppins', sans-serif;
+
+@mixin text{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 60px;
+}

@@ -1,0 +1,24 @@
+.HeaderBar{
+    width: 100%;
+    z-index: 10;
+    background: #FFFFFF;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+}
+
+.appName{
+    height: 60px;
+
+    display: flex;
+    padding-left: 24px;
+    align-items: center;
+    
+    border-bottom: 1px solid #EBEFF2;
+    
+    a{
+        line-height: 25px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: #109CF1;
+    }
+}

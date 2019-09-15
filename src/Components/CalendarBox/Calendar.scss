@@ -1,0 +1,7 @@
+@import "../../mixins";
+
+.calendarCss{
+  &.react-calendar{
+    border: 0px solid white;
+  }
+}

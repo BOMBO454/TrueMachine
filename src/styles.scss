@@ -1,0 +1,16 @@
+@import "~./mixins";
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: $MainFont;
+}
+
+.background{
+  background-color: #E5E5E5;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
