@@ -2,9 +2,9 @@ import React from 'react'
 import css from './TaskBoard.module.scss'
 
 import {Progress} from 'semantic-ui-react'
-import SelectBoxText from '../../Components/SelectBoxText/SelectBoxText'
-import DatePickerLine from '../../Components/DatePickerLine/DatePickerLine'
-import TaskTreckBoard from '../../Components/TaskTreckBoard/TaskTreckBoard'
+import SelectBoxText from 'Components/SelectBoxText/SelectBoxText'
+import DatePickerLine from 'Components/DatePickerLine/DatePickerLine'
+import TaskTreckBoard from 'Components/TaskTreckBoard/TaskTreckBoard'
 
 class TaskBoard extends React.Component {
     render() {
