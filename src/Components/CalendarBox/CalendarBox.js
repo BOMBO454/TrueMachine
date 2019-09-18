@@ -1,6 +1,5 @@
 import React from 'react'
 import css from './CalendarBox.module.scss'
-// import Calendar from 'react-calendar/dist/entry.nostyle'
 import Calendar from 'react-calendar';
 import './Calendar.scss'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './DatePickerLine.module.scss'
-import DateCircle from '../DateCircle/DateCircle'
+import DateCircle from 'Components/DateCircle/DateCircle'
 
 const options = [
     { key: 1, text: 'Sun', value: 23 },

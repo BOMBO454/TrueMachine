@@ -10,7 +10,7 @@ class TaskCard extends React.Component{
                 <div className={css.topWrapper}>
                     <div className={css.description}>
                         <div className={css.title}>{header}</div>
-                        <div className={css.date}>Due date: <span>{header}</span></div>
+                        <div className={css.date}>Due date: <span>{date}</span></div>
                     </div>
                     <div className={css.type}>{type}</div>
                 </div>

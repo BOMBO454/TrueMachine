@@ -3,8 +3,8 @@ import css from './Dashboard.module.scss'
 import axios from 'axios';
 
 
-import TaskBoard from '../../Components/TaskBoard/TaskBoard'
-import CalendarBox from '../../Components/CalendarBox/CalendarBox'
+import TaskBoard from 'Components/TaskBoard/TaskBoard'
+import CalendarBox from 'Components/CalendarBox/CalendarBox'
 
 class Dashboard extends React.Component{
     componentDidMount() {

@@ -1,9 +1,9 @@
 import React from 'react'
-import css from './TaskTreckBoard.module.scss'
+// import css from './TaskTreckBoard.module.scss'
 import {SortableContainer, SortableElement} from 'react-sortable-hoc'
 import arrayMove from 'array-move'
 
-import TaskCard from '../../Components/TaskCard/TaskCard'
+import TaskCard from 'Components/TaskCard/TaskCard'
 
 const SortableItem = SortableElement(({value}) => <TaskCard value={value} />);
 
