@@ -2,7 +2,7 @@ import React from 'react'
 import Router from './Pages/Router'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import "./styles.scss";
+import "./styles/styles.scss"
 
 const initialState = {
     friends: [1, 2, 3],
@@ -12,12 +12,12 @@ const initialState = {
             name: 'Theodore Roosevelt'
         }
     }
-};
+}
 
 function initState(state = initialState, action) {
     switch (action.type) {
         case 'ADD_NOTE':
-            const newId = state.friends[state.friends.length-1] + 1;
+            const newId = state.friends[state.friends.length-1] + 1
             return {
                 friends: state.friends.concat(newId),
                 friendsById: {
@@ -30,7 +30,7 @@ function initState(state = initialState, action) {
             }
 
         default:
-            return state;
+            return state
     }
 }
 
@@ -53,7 +53,7 @@ function App() {
                 {console.log(store)}
             </Provider>
         </div>
-    );
+    )
 }
 
-export default App;
+export default App

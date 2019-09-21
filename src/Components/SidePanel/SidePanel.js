@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './SidePanel.module.scss'
-import { Link, BrowserRouter as Router } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { CONTACTS_PAGE, MAIN_PAGE } from "Pages/Router.js"
 
 class SidePanel extends React.Component{

@@ -16,7 +16,7 @@ class SelectBoxText extends React.Component{
         const { value } = this.state
         return(
             <span className={css.SelectBoxText}>
-                <span>Show:&nbsp;</span>
+                <span>Show:&nbsp </span>
                 <Dropdown
                     className={css.selectedText}
                     onChange={this.handleChange}

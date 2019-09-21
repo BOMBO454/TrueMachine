@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './Dashboard.module.scss'
-import axios from 'axios';
+import axios from 'axios'
 
 
 import TaskBoard from 'Components/TaskBoard/TaskBoard'
@@ -10,8 +10,8 @@ class Dashboard extends React.Component{
     componentDidMount() {
         axios.get(`${axios.defaults.baseURL}/people`)
             .then(res => {
-                const people= res.data;
-                this.setState({ people});
+                const people= res.data
+                this.setState({ people})
             })
     }
     render(){

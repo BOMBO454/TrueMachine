@@ -25,8 +25,8 @@ class Router extends React.Component{
                     </div>
                 </div>
             </BrowserRouter>
-        );
+        )
     }
   }
   
-  export default Router;
+  export default Router

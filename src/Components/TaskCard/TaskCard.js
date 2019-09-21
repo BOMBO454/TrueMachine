@@ -6,7 +6,7 @@ class TaskCard extends React.Component{
     render(){
         let {header,date,type,name,status} = this.props.value
         return(
-            <div className={css.cardWrapper}>
+            <li className={css.cardWrapper}>
                 <div className={css.topWrapper}>
                     <div className={css.description}>
                         <div className={css.title}>{header}</div>
@@ -26,7 +26,7 @@ class TaskCard extends React.Component{
                         }
                     </div>
                 </div>
-            </div>
+            </li>
         )
     }
 }
