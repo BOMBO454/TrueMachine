@@ -16,9 +16,9 @@ class DatePickerLine extends React.Component{
     render(){
         return(
             <div className={css.datePickerLine}>
-            {options.map((item)=> {
+            {options.map((item,key)=> {
                  return(
-                     <DateCircle text={item.text} date={item.value} selected={item.selected}/>
+                     <DateCircle key={key} text={item.text} date={item.value} selected={item.selected}/>
                  )
             })}
             </div>

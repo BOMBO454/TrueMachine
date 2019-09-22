@@ -11,7 +11,7 @@ const SortableList = SortableContainer(({items}) => {
     return (
         <ul>
             {items.map((value, index) => {
-                return(<SortableItem key={`item-${value}`} index={index} value={value} />)
+                return(<SortableItem key={index} index={index} value={value} />)
             })}
         </ul>
     );

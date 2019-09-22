@@ -2,7 +2,7 @@
 
 .sidePanel{
     width: 256px;
-    height: 100vh;
+    height: auto;
     background: #FFFFFF;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
     z-index: 20;
@@ -10,7 +10,6 @@
 
 .appName{
     height: 60px;
-
     display: flex;
     padding-left: 24px;
     align-items: center;
@@ -27,14 +26,44 @@
 }
 
 .menu_items{
-    margin-left: 24px;
-    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
     color: #334D6E;
+    list-style: none;
+    transition: 300ms;
 }
 
 .icon{
-    width: 14px;
-    height: 14px;
+    margin-right: 16.5px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    background-image: url("/src/img/dashboard-active.svg");
+    transition: 300ms;
+}
+
+.activeLink{
+    .icon{
+        transition: 300ms;
+        stroke: #109CF1;
+    }
+}
+
+.extraPanel{
+    padding-top: 24px;
+    margin-top:4px;
+    border-top:1px solid #EBEFF2;
+}
+
+.link:hover{
+    .menu_items{
+        transition: 300ms;
+        color: #109CF1;
+    }
+    .icon{
+        transition: 300ms;
+        stroke: #109CF1;
+    }
 }

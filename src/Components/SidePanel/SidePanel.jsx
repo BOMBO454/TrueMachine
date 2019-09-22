@@ -1,41 +1,49 @@
 import React from 'react'
 import css from './SidePanel.module.scss'
-import { Link } from "react-router-dom"
-import { CONTACTS_PAGE, MAIN_PAGE } from "Pages/Router.js"
+import { NavLink } from "react-router-dom"
+import { CONTACTS_PAGE, MAIN_PAGE } from "Pages/Router"
+import { Dashboard,Tasks,Email,Contacts,Chat,Deals,Settings } from "Components/SvgComponent/SvgComponent"
+import SideProfileComponent from "Components/SideProfileComponent/SideProfileComponent"
 
 class SidePanel extends React.Component{
     menuItems = [
         {
             title: 'Dashboard',
-            icon: 'dashboard-active.svg',
+            icon: Dashboard,
             link: MAIN_PAGE
         },
         {
             title: 'Tasks',
-            icon: 'dashboard-active.svg',
+            icon: Tasks,
             link: CONTACTS_PAGE
         },
         {
             title: 'Email',
-            icon: 'dashboard-active.svg',
+            icon: Email,
             link: CONTACTS_PAGE
         },
         {
             title: 'Contacts',
-            icon: 'dashboard-active.svg',
+            icon: Contacts,
             link: CONTACTS_PAGE
         },
         {
             title: 'Chat',
-            icon: 'dashboard-active.svg',
+            icon: Chat,
             link: CONTACTS_PAGE
         },
         {
             title: 'Deals',
-            icon: 'dashboard-active.svg',
+            icon: Deals,
             link: CONTACTS_PAGE
         }
     ]
+
+    persone = {
+        name:'Sierra Ferguson',
+        email:'s.ferguson@gmail.com',
+        img: "persone.png"
+    }
 
     render(){
         return(
@@ -44,23 +52,33 @@ class SidePanel extends React.Component{
                     <a href='/'>SaaS Kit</a>
                 </div>
                 <div className={css.personeWrapper}>
-
+                    <SideProfileComponent
+                        {...this.persone}
+                    />
                 </div>
                 <nav>
                     <ul>
-                        {this.menuItems.map((item)=>{
+                        {this.menuItems.map((item, key)=>{
+                            let Icon = item.icon
                             return(
-                                <Link to={item.link}>
+                                <NavLink key={key} exact={true} className={css.link} activeClassName={css.activeLink} to={item.link}>
                                     <li className={css.menu_items}>
-                                        <i className={css.icon}>
-                                        </i>
+                                        <Icon className={css.icon}/>
                                         {item.title}
                                     </li>
-                                </Link>
+                                </NavLink>
                             )
                         })}
                     </ul>
                 </nav>
+                <div className={css.extraPanel}>
+                    <a href='/#' className={css.link}>
+                        <li className={css.menu_items}>
+                            <Settings className={css.icon}/>
+                              Settings
+                        </li>
+                    </a>
+                </div>
             </div>
         )
     }

@@ -5,22 +5,39 @@
     z-index: 10;
     background: #FFFFFF;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
 }
 
-.appName{
+.inputWrapper{
     height: 60px;
 
     display: flex;
     padding-left: 24px;
     align-items: center;
-    
+
     border-bottom: 1px solid #EBEFF2;
-    
-    a{
-        line-height: 25px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        color: #109CF1;
+    .icon{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
     }
+    .input{
+        color: $AccentBlue;
+        outline: none;
+        border: none;
+    }
+    .input::placeholder{
+        color: #90A0B7;
+    }
+}
+
+
+.notifications {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+    cursor: pointer;
 }

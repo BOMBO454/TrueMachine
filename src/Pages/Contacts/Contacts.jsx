@@ -5,7 +5,7 @@ class Contacts extends React.Component{
     render(){
         return(
             <header className={css.header}>
-                <span>Я контакты</span>
+                <span>спам</span>
             </header>
         )
     }
