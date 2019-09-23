@@ -6,6 +6,12 @@ import SelectBoxText from 'Components/SelectBoxText/SelectBoxText'
 import DatePickerLine from 'Components/DatePickerLine/DatePickerLine'
 import TaskTreckBoard from 'Components/TaskTreckBoard/TaskTreckBoard'
 
+const options = [
+    { key: 1, text: 'This week', value: 1 },
+    { key: 2, text: 'Next week', value: 2 },
+    { key: 3, text: 'Next mounth', value: 3 },
+]
+
 class TaskBoard extends React.Component {
     render() {
         return (
@@ -13,7 +19,11 @@ class TaskBoard extends React.Component {
                 <div className={css.wrapper + ' ' + css.topWrapper}>
                     <div className={css.rowGrid}>
                         <span> 8 task completed out of 10 </span>
-                        <SelectBoxText/>
+                        <SelectBoxText
+                            options={options}
+                            text='Show'
+                            placeholder='Select range'
+                        />
                     </div>
                     <div className={css.statusBarWrapper}>
                         <Progress className={css.statusBar} color='green' percent={70} size='tiny'/>

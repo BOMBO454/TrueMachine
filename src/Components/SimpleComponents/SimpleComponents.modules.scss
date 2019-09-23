@@ -1,0 +1,32 @@
+@import "styles/mixins.scss";
+
+.just{
+
+}
+
+label{
+  display:flex;
+  cursor:pointer;
+  width:100%;
+  color: #D5D5D5;
+  &:hover {
+    svg{
+
+    }
+    path {
+      fill: #C2CFE0;
+    }
+  }
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+[type="checkbox"]:checked + label{
+  rect{
+    stroke: #2ED47A;
+  }
+  path {
+    fill: #2ED47A;
+  }
+}

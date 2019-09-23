@@ -4,7 +4,7 @@ import css from './SideProfileComponent.module.scss'
 class SideProfileComponent extends React.Component{
     render(){
         return(
-            <div className={css.sidePanel}>
+            <div className={css.personeWrapper}>
                 <div className={css.imageWrapper}>
                     <img src={this.props.img} alt={this.props.name}/>
                 </div>

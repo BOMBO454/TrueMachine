@@ -2,7 +2,7 @@ import React from 'react'
 import css from './SidePanel.module.scss'
 import { NavLink } from "react-router-dom"
 import { CONTACTS_PAGE, MAIN_PAGE } from "Pages/Router"
-import { Dashboard,Tasks,Email,Contacts,Chat,Deals,Settings } from "Components/SvgComponent/SvgComponent"
+import { Dashboard,Tasks,Email,Contacts,Chat,Deals,Settings,ToggleSidebar } from "Components/SvgComponent/SvgComponent"
 import SideProfileComponent from "Components/SideProfileComponent/SideProfileComponent"
 
 class SidePanel extends React.Component{
@@ -78,6 +78,14 @@ class SidePanel extends React.Component{
                               Settings
                         </li>
                     </a>
+                </div>
+                <div className={css.toggleWrapper}>
+                <a href='/#' className={css.sideBarToggle}>
+                    <li className={css.menu_items}>
+                        <ToggleSidebar className={css.icon}/>
+                        Toggle sidebar
+                    </li>
+                </a>
                 </div>
             </div>
         )

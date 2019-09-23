@@ -2,8 +2,8 @@ import React from 'react'
 // import css from './TaskTreckBoard.module.scss'
 import {SortableContainer, SortableElement} from 'react-sortable-hoc'
 import arrayMove from 'array-move'
-
 import TaskCard from 'Components/TaskCard/TaskCard'
+import { ReactReduxContext } from 'react-redux'
 
 const SortableItem = SortableElement(({value}) => <TaskCard value={value} />);
 
@@ -18,31 +18,6 @@ const SortableList = SortableContainer(({items}) => {
 });
 
 class TaskTreckBoard extends React.Component{
-    state = {
-        items: [
-            {
-                'header':'Send benefit review by Sunday',
-                'date':'December 23, 2018',
-                'type':'Reminder',
-                'name':'George Fields',
-                'status':'Completed'
-            },
-            {
-                'header':'Invite to office meet-up',
-                'date':'December 23, 2018',
-                'type':'Call',
-                'name':'Rebecca Moore',
-                'status':'Ended'
-            },
-            {
-                'header':'Office meet-up',
-                'date':'December 23, 2018',
-                'type':'Event',
-                'name':'Lindsey Stroud',
-                'status':'Completed'
-            }
-        ]
-    };
     onSortEnd = ({oldIndex, newIndex}) => {
         this.setState(({items}) => ({
             items: arrayMove(items, oldIndex, newIndex),
@@ -50,7 +25,13 @@ class TaskTreckBoard extends React.Component{
     };
     render() {
         return(
-            <SortableList items={this.state.items} onSortEnd={this.onSortEnd} />
+            <ReactReduxContext.Consumer>
+                {({ store }) => {
+                    return(
+                        <SortableList items={store.getState().reducerTask} onSortEnd={this.onSortEnd} />
+                    )
+                }}
+            </ReactReduxContext.Consumer>
         )
     }
 }

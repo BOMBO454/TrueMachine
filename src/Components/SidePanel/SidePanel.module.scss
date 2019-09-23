@@ -6,9 +6,11 @@
     background: #FFFFFF;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
     z-index: 20;
+    position: relative;
 }
 
 .appName{
+    margin-bottom: 24px;
     height: 60px;
     display: flex;
     padding-left: 24px;
@@ -65,5 +67,24 @@
     .icon{
         transition: 300ms;
         stroke: #109CF1;
+    }
+}
+.toggleWrapper{
+    width: 100%;
+    position: absolute;
+    bottom:0px;
+}
+.sideBarToggle{
+    .menu_items{
+        color: #90A0B7;
+    }
+    &:hover .menu_items{
+        transition: 300ms;
+        color: #109CF1;
+    }
+    &:hover .icon{
+        transition: 300ms;
+        fill: #109CF1;
+        color: #109CF1;
     }
 }
